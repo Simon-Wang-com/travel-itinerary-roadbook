@@ -1,10 +1,11 @@
 # travel-itinerary-roadbook
 
-可交互的单文件 HTML 旅行路书 skill（v3.1）。
+可交互的单文件 HTML 旅行路书 skill（v3.13）。
 
 ## 直接下载
 
-- [travel-roadbook-v3.1.zip](https://github.com/Simon-Wang-com/travel-itinerary-roadbook/raw/main/travel-roadbook-v3.1.zip)
+- [travel-roadbook-v3.13.zip](https://github.com/Simon-Wang-com/travel-itinerary-roadbook/raw/main/travel-roadbook-v3.13.zip)
+- 旧版本保留：[v3.1](https://github.com/Simon-Wang-com/travel-itinerary-roadbook/raw/main/travel-roadbook-v3.1.zip) / [v2.7](https://github.com/Simon-Wang-com/travel-itinerary-roadbook/raw/main/travel-roadbook-v2.7.zip)
 
 ## 这是什么
 
@@ -16,10 +17,12 @@
 - 美食、记账、预算、天气穿搭、导览图
 - 返回/关闭的来路栈、滚动位置记忆
 - 二维码交付
+- 车票/机票识别、票务入口嵌入当天交通行
+- 车票卡禁止「航班座位」按钮；机票卡保留「返回车票」
 
 ## 安装
 
-1. 下载仓库中的 [travel-roadbook-v3.1.zip](https://github.com/Simon-Wang-com/travel-itinerary-roadbook/raw/main/travel-roadbook-v3.1.zip)。
+1. 下载仓库中的 `travel-roadbook-v3.13.zip`。
 2. 打开豆包工作客户端 → 左侧「插件·技能·伙伴」→「技能」→ 右上角「+ 添加」→「上传技能」。
 3. 选择这个 zip，等待解析完成。
 
@@ -27,12 +30,12 @@
 
 ## 版本
 
-- skill 版本：v3.1（累计修改 31 次）。
+- skill 版本：v3.13（累计修改 43 次）。
 - 生成的路书自身版本独立计算：第一版为 v0.1，之后每次修改递增（v0.2、v0.3……），不跟 skill 版本混用。
 
-## v3.1 修复重点
+## v3.13 修复重点
 
-- 模板不再保留南京/杭州示例详情、餐厅表、官方导览图和示例高德关键词；只保留框架与占位。
-- 自检脚本新增编码 URL 检查，模板严格示例残留检查为 0。
-- Day 标签恢复原版选中态：深青填充 + 白字；未选中浅色胶囊。
-- 时间线自动补高德导航，版本号必须递增，票卡/座位/航班识别继续保留。
+- 车票/高铁卡不再显示「✈️ 航班座位」按钮，避免用户在高铁路书里误入机票座位。
+- 机票卡保留「🚆 返回车票」，从航班入口打开后仍可切回车票。
+- 模板、静态验收和用户视角走查同步增加「车票卡禁止 `tkPlaneOpen`」检查。
+- 继续保留 v3.12 的票务入口贴合交通行：G1623 在 Day 1 10:04、D6439 在 Day 2 13:53、MF8301 在 Day 5 15:15 的交通行之后。
